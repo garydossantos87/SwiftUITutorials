@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		E03E8FFB22B38FA20066809F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03E8FFA22B38FA20066809F /* AppDelegate.swift */; };
 		E03E8FFD22B38FA20066809F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03E8FFC22B38FA20066809F /* SceneDelegate.swift */; };
-		E03E8FFF22B38FA20066809F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03E8FFE22B38FA20066809F /* ContentView.swift */; };
+		E03E8FFF22B38FA20066809F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03E8FFE22B38FA20066809F /* HomeView.swift */; };
 		E03E900122B38FA60066809F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03E900022B38FA60066809F /* Assets.xcassets */; };
 		E03E900422B38FA60066809F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03E900322B38FA60066809F /* Preview Assets.xcassets */; };
 		E03E900722B38FA60066809F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E03E900522B38FA60066809F /* LaunchScreen.storyboard */; };
+		E03E901322B3A5AA0066809F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03E901222B3A5AA0066809F /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E03E8FF722B38FA20066809F /* SwiftUITutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03E8FFA22B38FA20066809F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E03E8FFC22B38FA20066809F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E03E8FFE22B38FA20066809F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E03E8FFE22B38FA20066809F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E03E900022B38FA60066809F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E03E900322B38FA60066809F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E03E900622B38FA60066809F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E03E900822B38FA60066809F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E03E901222B3A5AA0066809F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				E03E900E22B38FD00066809F /* App */,
 				E03E900F22B38FE00066809F /* Commons */,
+				E03E901122B3A5980066809F /* Core */,
 			);
 			path = SwiftUITutorials;
 			sourceTree = "<group>";
@@ -94,9 +97,17 @@
 		E03E901022B38FF10066809F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E03E8FFE22B38FA20066809F /* ContentView.swift */,
+				E03E8FFE22B38FA20066809F /* HomeView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E03E901122B3A5980066809F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E03E901222B3A5AA0066809F /* Theme.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +182,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03E8FFB22B38FA20066809F /* AppDelegate.swift in Sources */,
+				E03E901322B3A5AA0066809F /* Theme.swift in Sources */,
 				E03E8FFD22B38FA20066809F /* SceneDelegate.swift in Sources */,
-				E03E8FFF22B38FA20066809F /* ContentView.swift in Sources */,
+				E03E8FFF22B38FA20066809F /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

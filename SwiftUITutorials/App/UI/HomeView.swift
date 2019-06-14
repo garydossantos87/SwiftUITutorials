@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  SwiftUITutorials
 //
 //  Created by BeiOSRepublic on 14/06/2019.
@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct HomeView : View {
     var body: some View {
         Text("Hello World")
     }
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct HomeView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
 #endif
