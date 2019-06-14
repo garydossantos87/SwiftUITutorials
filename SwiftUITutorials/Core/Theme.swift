@@ -8,18 +8,12 @@
 
 import UIKit
 
-enum ThemeImage {
+enum ThemeImage: String {
     
-    case swiftUI
+    case swiftUI = "ic_swiftui", apple = "ic_apple", brianVoong = "ic_brian_voong", rayWenderlich =  "ic_ray_wenderlich", paulHudson = "ic_paul_hudson"
     
     func image() -> UIImage {
-        var imageName = ""
-        
-        switch self {
-        case .swiftUI:
-            imageName = "ic_swiftui"
-        }
-        return UIImage(named: imageName) ?? UIImage()
+        return UIImage(named: self.rawValue) ?? UIImage()
     }
     
 }
