@@ -15,7 +15,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List(viewModel.users.identified(by: \.self)) { user in
-                NavigationButton(destination: HomeDetailView(), label: {
+                NavigationButton(destination: HomeDetailView(user: user), label: {
                     HomeViewCell(user: user)
                 })
                 }.navigationBarTitle(Text("Tutorials"))

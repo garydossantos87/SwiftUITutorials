@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct HomeViewCell: View {
-    private let imageSize: CGFloat = 70.0
+    private let imageSize: CGFloat = 60.0
+    private let imageLineWidthSize: CGFloat = 2.0
     let user: UserModel
     
     var body: some View {
@@ -18,13 +19,12 @@ struct HomeViewCell: View {
                 .resizable()
                 .clipShape(Circle())
                 .overlay(Circle()
-                    .stroke(Color.black, lineWidth: 2))
-                
+                    .stroke(Color.black, lineWidth: imageLineWidthSize))
                 .frame(width: imageSize, height: imageSize)
             VStack(alignment: .leading) {
                 Text(user.name)
                     .font(.headline)
-                Text(user.description)
+                Text(user.url)
                     .font(.subheadline)
                     .color(.gray)
                     .lineLimit(nil)
@@ -36,7 +36,7 @@ struct HomeViewCell: View {
 #if DEBUG
 struct HomeViewCell_Previews : PreviewProvider {
     static var previews: some View {
-        HomeViewCell(user: UserModel(name: "Apple Tutorials", description: "Some description", image: ThemeImage.apple.image()))
+        HomeViewCell(user: UserModel(name: "Apple Tutorials", url: "Some description", image: ThemeImage.apple.image()))
     }
 }
 #endif

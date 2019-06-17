@@ -7,17 +7,22 @@
 //
 
 import SwiftUI
+import WebKit
 
-struct HomeDetailView : View {
+struct HomeDetailView: View {
+    let user: UserModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            WebView(urlString: user.url)
+        }.navigationBarItem(title: Text(user.name), titleDisplayMode: .inline)
     }
 }
 
 #if DEBUG
 struct HomeDetailView_Previews : PreviewProvider {
     static var previews: some View {
-        HomeDetailView()
+        HomeDetailView(user: UserModel(name: "Apple Tutorials", url: "https://developer.apple.com/tutorials", image: ThemeImage.apple.image()))
     }
 }
 #endif

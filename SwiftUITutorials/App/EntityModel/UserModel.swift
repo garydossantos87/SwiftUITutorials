@@ -11,7 +11,7 @@ import UIKit
 struct UserModel: Hashable {
 
     var name: String
-    var description: String
+    var url: String
     var image: UIImage
     
 }
