@@ -14,6 +14,10 @@
 		E03E900422B38FA60066809F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03E900322B38FA60066809F /* Preview Assets.xcassets */; };
 		E03E900722B38FA60066809F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E03E900522B38FA60066809F /* LaunchScreen.storyboard */; };
 		E03E901322B3A5AA0066809F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03E901222B3A5AA0066809F /* Theme.swift */; };
+		E04AA02922B79E9A001F2819 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04AA02822B79E9A001F2819 /* HomeViewCell.swift */; };
+		E04AA02C22B79EED001F2819 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04AA02B22B79EED001F2819 /* UserModel.swift */; };
+		E04AA02E22B7A95F001F2819 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04AA02D22B7A95F001F2819 /* HomeViewModel.swift */; };
+		E04AA03222B7C47D001F2819 /* HomeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04AA03122B7C47D001F2819 /* HomeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		E03E900622B38FA60066809F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E03E900822B38FA60066809F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E03E901222B3A5AA0066809F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E04AA02822B79E9A001F2819 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		E04AA02B22B79EED001F2819 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E04AA02D22B7A95F001F2819 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E04AA03122B7C47D001F2819 /* HomeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			children = (
 				E03E8FFA22B38FA20066809F /* AppDelegate.swift */,
 				E03E8FFC22B38FA20066809F /* SceneDelegate.swift */,
+				E04AA02A22B79ED2001F2819 /* EntityModel */,
 				E03E901022B38FF10066809F /* UI */,
 			);
 			path = App;
@@ -86,10 +95,8 @@
 		E03E900F22B38FE00066809F /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				E03E900022B38FA60066809F /* Assets.xcassets */,
-				E03E900822B38FA60066809F /* Info.plist */,
-				E03E900522B38FA60066809F /* LaunchScreen.storyboard */,
-				E03E900222B38FA60066809F /* Preview Content */,
+				E04AA02422B79DFA001F2819 /* Component */,
+				E04AA02522B79E1E001F2819 /* Resources */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -97,7 +104,7 @@
 		E03E901022B38FF10066809F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E03E8FFE22B38FA20066809F /* HomeView.swift */,
+				E04AA02F22B7C45F001F2819 /* Home */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -108,6 +115,75 @@
 				E03E901222B3A5AA0066809F /* Theme.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E04AA02422B79DFA001F2819 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E04AA02622B79E6A001F2819 /* Cell */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E04AA02522B79E1E001F2819 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E03E900022B38FA60066809F /* Assets.xcassets */,
+				E03E900822B38FA60066809F /* Info.plist */,
+				E03E900522B38FA60066809F /* LaunchScreen.storyboard */,
+				E03E900222B38FA60066809F /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E04AA02622B79E6A001F2819 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E04AA02722B79E84001F2819 /* HomeCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E04AA02722B79E84001F2819 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				E04AA02822B79E9A001F2819 /* HomeViewCell.swift */,
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		E04AA02A22B79ED2001F2819 /* EntityModel */ = {
+			isa = PBXGroup;
+			children = (
+				E04AA02B22B79EED001F2819 /* UserModel.swift */,
+			);
+			path = EntityModel;
+			sourceTree = "<group>";
+		};
+		E04AA02F22B7C45F001F2819 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E04AA03022B7C467001F2819 /* Detail */,
+				E04AA03322B7C484001F2819 /* Idle */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E04AA03022B7C467001F2819 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E04AA03122B7C47D001F2819 /* HomeDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E04AA03322B7C484001F2819 /* Idle */ = {
+			isa = PBXGroup;
+			children = (
+				E03E8FFE22B38FA20066809F /* HomeView.swift */,
+				E04AA02D22B7A95F001F2819 /* HomeViewModel.swift */,
+			);
+			path = Idle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +259,11 @@
 			files = (
 				E03E8FFB22B38FA20066809F /* AppDelegate.swift in Sources */,
 				E03E901322B3A5AA0066809F /* Theme.swift in Sources */,
+				E04AA02E22B7A95F001F2819 /* HomeViewModel.swift in Sources */,
+				E04AA02922B79E9A001F2819 /* HomeViewCell.swift in Sources */,
 				E03E8FFD22B38FA20066809F /* SceneDelegate.swift in Sources */,
+				E04AA02C22B79EED001F2819 /* UserModel.swift in Sources */,
+				E04AA03222B7C47D001F2819 /* HomeDetailView.swift in Sources */,
 				E03E8FFF22B38FA20066809F /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,10 +402,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "SwiftUITutorials/Commons/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "SwiftUITutorials/Commons/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 835BDH2HHD;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUITutorials/Commons/Info.plist;
+				INFOPLIST_FILE = SwiftUITutorials/Commons/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,10 +424,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "SwiftUITutorials/Commons/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "SwiftUITutorials/Commons/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 835BDH2HHD;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUITutorials/Commons/Info.plist;
+				INFOPLIST_FILE = SwiftUITutorials/Commons/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
